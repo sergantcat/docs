@@ -1,0 +1,62 @@
+---
+title: "Blender 3D Modeling for Roblox Games"
+sidebarTitle: "Blender Modeling"
+description: "Explore my Blender 3D modeling workflow for creating custom assets, meshes, and environments optimized for use in Roblox games."
+---
+
+Blender is at the heart of how I bring unique, polished visuals to my Roblox games. While Roblox Studio's built-in part system is powerful, nothing beats the flexibility and creative control that Blender provides when crafting truly custom 3D assets. From character accessories and detailed props to full architectural structures, I use Blender to design and optimize every mesh before importing it into Roblox Studio — ensuring both visual quality and solid in-game performance. This combination of Blender and Roblox Studio lets me build game worlds that stand out with a distinct, professional look.
+
+## What I Create
+
+<CardGroup cols={2}>
+  <Card title="Character Models" icon="person">
+    Custom character rigs, accessories, and avatar items modeled from scratch in Blender, designed to fit Roblox's avatar system and animation pipeline seamlessly.
+  </Card>
+  <Card title="Environment Props" icon="tree">
+    Detailed props like furniture, crates, barrels, foliage, and decorative items that populate game worlds and bring environments to life with visual richness.
+  </Card>
+  <Card title="Architecture & Structures" icon="building">
+    Buildings, ruins, bridges, dungeons, and other large-scale structures modeled in Blender and imported as cohesive mesh assets for use in level design.
+  </Card>
+  <Card title="Custom Meshes" icon="shapes">
+    One-off or reusable mesh pieces — from stylized rocks and terrain features to mechanical parts — crafted specifically to fill gaps that default Roblox parts can't cover.
+  </Card>
+</CardGroup>
+
+## My Modeling Workflow
+
+<Steps>
+  <Step title="Concept & Reference Gathering">
+    Every model starts with a clear vision. I collect reference images, sketch rough ideas, and define the style (realistic, low-poly, stylized) before touching a single vertex in Blender. Good references save time and keep the final asset consistent with the game's art direction.
+  </Step>
+  <Step title="Blockout / Low-Poly Base">
+    I begin by blocking out the rough shape of the model using simple geometry — boxes, cylinders, and planes. This stage is all about proportions and silhouette. Keeping things low-poly at this point makes it easy to iterate quickly without committing to details too early.
+  </Step>
+  <Step title="Detail Sculpting & Refinement">
+    Once the blockout feels right, I refine the mesh by adding edge loops, bevels, and surface details. For organic shapes I may use Blender's sculpt mode. The goal is to add enough detail to look great in-game without unnecessarily inflating the polygon count.
+  </Step>
+  <Step title="UV Unwrapping & Texturing">
+    With the mesh finalized, I UV unwrap the model to create a clean, efficient texture layout. I then apply textures — either hand-painted or using PBR material workflows — to give the model its final look, including color, roughness, and surface normals where applicable.
+  </Step>
+  <Step title="Export & Import to Roblox Studio">
+    The finished model is exported as an `.fbx` or `.obj` file and imported directly into Roblox Studio as a `MeshPart`. I verify scale, orientation, and material assignments inside Studio, then integrate the asset into the game scene and test it in play mode.
+  </Step>
+</Steps>
+
+## Key Blender Skills
+
+- **Mesh Modeling** — Proficient with Blender's full edit-mode toolset, including extrusion, loop cuts, knife cuts, and boolean operations for building clean, game-ready geometry.
+- **UV Unwrapping** — Able to create efficient, low-distortion UV layouts that make the most of limited texture resolution, crucial for keeping Roblox asset sizes manageable.
+- **Basic Texturing** — Experienced with applying and baking texture maps in Blender, including diffuse, roughness, and normal maps for added surface detail.
+- **PBR Materials** — Familiar with physically based rendering workflows, creating materials that look consistent under Roblox Studio's various lighting conditions.
+- **Low-Poly Optimization for Roblox** — Skilled at reducing polygon counts through retopology, decimation, and deliberate modeling decisions — keeping assets performant without sacrificing visual quality.
+
+<Tip>
+  Low-poly modeling is essential for Roblox games because the engine must render many assets simultaneously across a wide range of devices, including phones and tablets. Every extra polygon adds to the rendering load, which can cause frame rate drops and longer load times. By keeping mesh polygon counts as low as possible — while compensating with smart texturing and normal maps — you get great visuals without hurting game performance.
+</Tip>
+
+## See It in Action
+
+<Card title="View 3D Model Projects" icon="cube" href="/projects/3d-models">
+  Browse my portfolio of Blender-created 3D models, from character accessories and environment props to full architectural assets built for Roblox games.
+</Card>

@@ -1,0 +1,81 @@
+---
+title: "UI Design in Roblox Studio — Menus, HUDs & More"
+sidebarTitle: "Roblox UI"
+description: "See how I design and build Roblox game UI including HUD elements, menus, inventory screens, and interactive buttons using ScreenGui and LocalScripts."
+---
+
+UI design is one of my favourite parts of the Roblox development process. A great game doesn't just play well — it *feels* well, and that experience starts the moment a player lands on the screen. I focus on crafting clean, intuitive interfaces that guide players naturally through menus, communicate vital in-game information at a glance, and keep them immersed in the world rather than fighting with confusing layouts. From a simple health bar to a fully animated shop screen, every element I build is designed with the player's experience at the centre.
+
+## Types of UI I Build
+
+<CardGroup cols={2}>
+  <Card title="HUD & Status Bars" icon="heart-pulse">
+    Health bars, stamina meters, score counters, and mini-maps that keep players informed without cluttering the screen.
+  </Card>
+  <Card title="Main Menus & Lobbies" icon="house">
+    Polished title screens and lobby UIs with play buttons, settings panels, and smooth transitions that set the tone for the entire game.
+  </Card>
+  <Card title="Inventory & Shop Screens" icon="bag-shopping">
+    Scrollable item grids, equip/unequip toggles, currency displays, and purchase confirmation popups that feel natural to navigate.
+  </Card>
+  <Card title="Notification & Popup Systems" icon="bell">
+    Dynamic toast notifications, reward popups, and modal dialogs that appear and disappear with satisfying animations.
+  </Card>
+</CardGroup>
+
+## UI Design Principles
+
+**Clarity and Readability** — Every element on screen should communicate its purpose instantly. I choose font sizes, weights, and contrast levels carefully so that players can read important information at a glance, even on a small screen or in the middle of fast-paced gameplay. If a player has to squint or guess what a button does, the design has already failed.
+
+**Consistent Visual Language** — A cohesive UI uses a unified colour palette, matching corner radii, and consistent spacing across every screen. I establish a small set of visual rules — primary colours, secondary accents, icon styles — and apply them throughout the entire project so the interface feels like one intentional system rather than a collection of unrelated pieces.
+
+**Feedback and Responsiveness** — Good UI reacts to the player. Buttons should visually respond when hovered or clicked, health bars should animate as values change, and error messages should appear immediately when something goes wrong. This kind of feedback builds confidence and makes the interface feel alive and trustworthy.
+
+**Mobile-Friendly Design** — A huge portion of the Roblox player base uses mobile devices, so I always design with touch in mind. That means larger tap targets, avoiding layouts that rely on precise cursor positioning, and testing UIs at multiple screen aspect ratios to make sure nothing clips or overlaps on phones and tablets.
+
+## Roblox UI Components
+
+<AccordionGroup>
+  <Accordion title="ScreenGui & SurfaceGui">
+    `ScreenGui` is the container for all 2D interface elements and lives inside a player's `PlayerGui`. It renders on top of the 3D world, making it perfect for HUDs and menus. `SurfaceGui`, on the other hand, projects UI directly onto a 3D part's surface — great for in-world signs, interactive screens, or billboards that exist inside the game environment.
+  </Accordion>
+  <Accordion title="Frame & TextLabel">
+    `Frame` is the foundational building block of any Roblox UI. It's a plain rectangle that can be coloured, sized, and positioned using `UDim2` values, making it ideal as a background panel or a container for other elements. `TextLabel` sits inside frames to display static text — player names, score readouts, instructions — with full control over font, size, colour, and alignment.
+  </Accordion>
+  <Accordion title="ImageButton & TextButton">
+    These are the primary interactive elements in Roblox UI. `TextButton` renders a clickable rectangle with a text label, while `ImageButton` uses a custom image asset, making it perfect for icon-based controls. Both fire events like `MouseButton1Click` and `MouseEnter` that I connect to LocalScripts to drive all the logic behind menus and actions.
+  </Accordion>
+  <Accordion title="Tweening for Animations">
+    Raw UI that snaps instantly between states feels cheap and jarring. I use Roblox's `TweenService` to animate property changes — resizing buttons on hover, sliding panels in from the edge of the screen, fading out notifications — over a defined duration with easing styles. The result is a polished, professional feel that significantly elevates the overall player experience.
+  </Accordion>
+</AccordionGroup>
+
+## Sample Button Tween Script
+
+Here's a simple example of a button click handler that uses `TweenService` to scale the button up slightly when clicked, giving satisfying tactile feedback:
+
+```lua
+local button = script.Parent
+local TweenService = game:GetService("TweenService")
+
+button.MouseButton1Click:Connect(function()
+    local tween = TweenService:Create(button, TweenInfo.new(0.2), {
+        Size = UDim2.new(0, 110, 0, 55)
+    })
+    tween:Play()
+end)
+```
+
+This pattern — grabbing the button reference, creating a `TweenInfo` with a short duration, and playing a size change — is a staple of my UI toolkit. It's lightweight, easy to extend, and makes a noticeable difference to how interactive elements feel.
+
+<Tip>
+  Always use `TweenService` instead of abruptly setting property values when animating UI. Even a 0.1–0.3 second ease makes interactions feel significantly more polished and intentional. Pair `Enum.EasingStyle.Back` with `Enum.EasingDirection.Out` for a satisfying "pop" effect on buttons.
+</Tip>
+
+## See My Designs
+
+Want to see these principles and components in action? Browse my UI project showcase below.
+
+<Card title="View UI Design Projects" icon="window" href="/projects/ui-designs">
+  Explore screenshots and breakdowns of the menus, HUDs, and interactive screens I've built across my Roblox projects.
+</Card>

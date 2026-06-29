@@ -1,0 +1,88 @@
+---
+title: "JavaScript Development — Learning & Growing"
+sidebarTitle: "JavaScript"
+description: "Follow my JavaScript learning journey, from core fundamentals like variables and functions to DOM manipulation and building small interactive web projects."
+---
+
+JavaScript is a skill I'm actively and enthusiastically building. I first got curious about it after spending so much time writing Lua scripts inside Roblox Studio — once I realised how many core programming concepts carry directly across (variables, functions, conditionals, loops), diving into JavaScript felt like a natural next step. Web development has always fascinated me, and learning JavaScript is opening up a whole new world of what I can create: interactive portfolio pages, browser-based tools, and eventually full web applications. I'm a beginner, and I'm proud of that — every concept I pick up feels like adding another tool to my belt, and I'm genuinely excited about where this journey is heading.
+
+## Where I Am Now
+
+<Info>
+  JavaScript is a beginner-to-intermediate skill that I'm actively developing. I'm consistently practising, building small projects, and working through structured learning resources. The examples and concepts on this page reflect my honest, current level — expect this section to grow as I do!
+</Info>
+
+## Core Concepts I've Learned
+
+<CardGroup cols={2}>
+  <Card title="Variables & Data Types" icon="box">
+    I'm comfortable with `let`, `const`, and `var`, and I understand the differences between strings, numbers, booleans, arrays, and objects — the building blocks of any JavaScript programme.
+  </Card>
+  <Card title="Functions & Scope" icon="code">
+    I can write named functions, arrow functions, and understand how scope determines where variables are accessible. Breaking logic into reusable functions is something I apply constantly.
+  </Card>
+  <Card title="DOM Manipulation" icon="display">
+    I know how to select HTML elements using `querySelector` and `getElementById`, and how to change their text, styles, and attributes dynamically using JavaScript after the page loads.
+  </Card>
+  <Card title="Events & Listeners" icon="bolt">
+    I can attach event listeners to elements to respond to clicks, key presses, form submissions, and mouse movements — the foundation of making any web page feel interactive and responsive.
+  </Card>
+</CardGroup>
+
+## Code Examples
+
+Here are a couple of real examples that reflect where I am right now. Nothing overly complex — but real, working code that I've written and understand.
+
+**Example 1 — A simple greeting function:**
+
+```javascript
+// Greeting function
+function greet(name) {
+  return `Hello, ${name}! Welcome to my portfolio.`;
+}
+
+console.log(greet("Visitor")); // Hello, Visitor! Welcome to my portfolio.
+```
+
+This was one of the first things I built when learning about template literals and function return values. It's simple, but understanding how string interpolation works with backticks was a genuine "aha" moment for me — especially coming from Lua's string concatenation with `..`.
+
+**Example 2 — DOM manipulation on a button click:**
+
+```javascript
+// Change button text on click
+const button = document.querySelector("#myButton");
+
+button.addEventListener("click", function () {
+  button.textContent = "Clicked!";
+  button.style.backgroundColor = "#ef7025";
+});
+```
+
+This example shows how I can select a real element from an HTML page and make it respond to user interaction. Updating the text and background colour on click was one of the first times I felt like I was building something genuinely interactive on the web, which was a really motivating moment.
+
+## What I'm Learning Next
+
+I've got a clear roadmap of where I want to take my JavaScript skills. Here's what's on my learning queue:
+
+<AccordionGroup>
+  <Accordion title="Async/Await & Promises">
+    Most interesting real-world JavaScript involves waiting for something — a network request, a timer, a file load. I'm learning how Promises represent future values and how `async`/`await` syntax makes asynchronous code readable and manageable, rather than falling into callback chaos.
+  </Accordion>
+  <Accordion title="Fetch API & REST">
+    Once I'm comfortable with async patterns, I want to start consuming real APIs using the Fetch API. Being able to pull data from a REST endpoint — a weather API, a game database, anything — and display it on a page feels like a huge milestone that will unlock so many project ideas.
+  </Accordion>
+  <Accordion title="Introduction to React">
+    React is everywhere in modern web development, and I want to understand why. I'm looking forward to learning about components, props, and state — and how React makes building complex, dynamic UIs much more organised than manipulating the DOM by hand.
+  </Accordion>
+  <Accordion title="Node.js Basics">
+    Taking JavaScript to the server side with Node.js is something I'm genuinely excited about. Running JavaScript outside the browser, handling files, and eventually building simple backend APIs would bring my web development skills full circle and open the door to more ambitious projects.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  If you're already a Roblox developer learning JavaScript, you'll find the transition surprisingly smooth. Lua and JavaScript share the same fundamental building blocks — variables, functions, loops, conditionals, and event-driven logic. The syntax looks different, but the way you *think* about solving problems is remarkably similar. My Roblox scripting experience gave me a real head start when it came to understanding how code flows and how to structure logic cleanly.
+</Note>
+
+<Tip>
+  If you're also learning JavaScript from scratch, I'd highly recommend **freeCodeCamp** (freecodecamp.org) for structured, project-based learning, and **MDN Web Docs** (developer.mozilla.org) as your go-to reference for anything and everything JavaScript. Both are completely free and genuinely excellent resources.
+</Tip>

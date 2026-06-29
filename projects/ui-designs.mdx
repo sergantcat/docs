@@ -1,0 +1,71 @@
+---
+title: "Roblox UI Design Projects — Menus, HUDs & Screens"
+sidebarTitle: "UI Designs"
+description: "Browse my Roblox UI design work including health bars, inventory screens, main menus, shop interfaces, and animated notification systems."
+---
+
+A great game can be undermined by a confusing or cluttered user interface — and a good UI can elevate even a simple game into something that feels genuinely professional. My approach to Roblox UI design is centered on clarity, consistency, and player comfort. Every interface I design is built to communicate information quickly, minimize friction during gameplay, and look visually polished without becoming distracting. I work exclusively within Roblox Studio's GUI framework, using Frames, TextLabels, ImageLabels, and TweenService animations to build interfaces that are both functional and visually cohesive. Whether it's a minimal health bar or a complex multi-tab inventory system, I design with the player experience first.
+
+## Design Showcase
+
+<CardGroup cols={2}>
+  <Card title="🛒 NexusHub Shop Interface" icon="store">
+    A multi-tab in-game shop UI designed for a sci-fi experience. Features a categorized item browser, animated item preview panel, purchase confirmation prompt, and a live currency display. Built with smooth tween transitions between tabs and a consistent dark-glass visual theme with glowing accent colors.
+  </Card>
+  <Card title="⚔️ Emberfall HUD System" icon="heart">
+    A complete heads-up display for the Emberfall RPG map. Includes a stylized health bar, mana bar, active quest tracker, minimap frame, and a skill hotbar along the bottom of the screen. Designed to feel epic and thematic without obscuring the player's view of the game world.
+  </Card>
+  <Card title="🏙️ Sunrise City Main Menu" icon="house">
+    An animated main menu and character customization screen for Sunrise City Roleplay. Players select their starting job, customize their character's outfit, and read the server rules — all from a clean, scrollable lobby UI with animated background elements and soft drop-shadow styling.
+  </Card>
+  <Card title="🔔 PopAlert Notification System" icon="bell">
+    A reusable animated notification component designed to be dropped into any game project. Toast-style alerts slide in from the edge of the screen, display an icon and message, and smoothly fade out after a configurable duration. Supports info, success, warning, and error styles with distinct color coding.
+  </Card>
+</CardGroup>
+
+## Design Process
+
+Building a polished Roblox UI is a multi-stage process that balances visual design, technical implementation, and real player feedback.
+
+<Steps>
+  <Step title="Wireframing the Layout">
+    Before opening Roblox Studio, I sketch out the UI layout on paper or in a simple digital wireframe tool. This step defines the placement of every element — where the health bar sits, how many columns the inventory grid uses, how the navigation tabs are arranged — without getting distracted by colors or styling. A clear wireframe prevents costly structural rebuilds later in the process.
+  </Step>
+  <Step title="Building in Roblox Studio">
+    With the wireframe approved, I construct the full UI inside Roblox Studio using the built-in GUI objects: ScreenGui, Frame, TextLabel, TextButton, ImageLabel, and ScrollingFrame. I use UIListLayout, UIGridLayout, and UICorner constraints to ensure elements are clean, aligned, and responsive to different screen sizes from the very start of the build.
+  </Step>
+  <Step title="Adding Animations & Tweens">
+    Static interfaces feel lifeless — animations and transitions are what give a UI personality and make it feel polished. I use TweenService to add smooth open/close animations, button hover effects, progress bar fill animations, and notification slide-ins. Every animation is timed carefully to feel snappy and responsive, never sluggish or showy.
+  </Step>
+  <Step title="Player Testing & Refinement">
+    Once the UI is functional, it gets tested by real players across different devices. I watch for elements that are too small to tap on mobile, text that's hard to read against busy backgrounds, buttons that feel unresponsive, and any flows that cause confusion. Iterating based on this feedback is what separates a functional UI from a genuinely great one.
+  </Step>
+</Steps>
+
+## UI Elements Used
+
+<AccordionGroup>
+  <Accordion title="ScreenGui & SurfaceGui">
+    ScreenGui is the foundation of all player-facing interfaces — it anchors the UI layer to the player's screen and ensures elements scale correctly across screen resolutions. I use SurfaceGui for in-world UI elements like name tags above NPCs, interactive terminal screens, and in-game signage that exists as part of the 3D environment rather than the HUD layer.
+  </Accordion>
+  <Accordion title="Frames, ScrollingFrames & ImageLabels">
+    Frames serve as containers and background panels for every UI section. ScrollingFrames are essential for inventory lists, leaderboard tables, and shop catalogs where content exceeds the visible area. ImageLabels are used extensively for icons, decorative borders, avatar thumbnails, and any graphical element that requires a custom image asset rather than a solid color.
+  </Accordion>
+  <Accordion title="TextLabels & TextButtons">
+    TextLabels display all static and dynamic text in the interface — from item names and stat values to tooltips and tutorial prompts. TextButtons power all interactive elements and are styled with UICorner and hover-state color changes driven by MouseEnter and MouseLeave events to give clear visual feedback to the player.
+  </Accordion>
+  <Accordion title="UIConstraints & Layout Objects">
+    UIListLayout and UIGridLayout automate the arrangement of child elements, making it trivial to add or remove items from a list or grid without manually repositioning everything. UIAspectRatioConstraint and UISizeConstraint ensure elements maintain correct proportions across screen sizes. UICorner rounds the corners of frames and buttons for a modern, polished aesthetic.
+  </Accordion>
+  <Accordion title="TweenService Animations">
+    TweenService is the engine behind all UI animations in my projects. I use it to animate position, size, transparency, and color — creating smooth transitions for menus opening and closing, progress bars filling up, health dropping, and notifications appearing. Tweens are always given an EasingStyle (typically Quad or Sine) and EasingDirection to ensure motion feels natural and intentional.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  All UI designs in this portfolio are built and tested for both desktop and mobile Roblox players. Mobile support is treated as a first-class requirement — not an afterthought. This means touch-friendly button sizes (minimum 44×44 pixels), readable font sizes at small screen resolutions, and layouts that reflow gracefully on portrait-orientation devices. Designing for mobile from the start avoids expensive restructuring later.
+</Note>
+
+<Card title="Learn About My UI Design Skills" icon="window" href="/skills/roblox-ui">
+  Want to know more about the techniques, tools, and principles behind my UI work? Visit my Roblox UI skills page for a deep dive into how I approach design, animation, and player experience.
+</Card>

@@ -1,0 +1,68 @@
+---
+title: "Building & Level Design in Roblox Studio"
+sidebarTitle: "Roblox Building"
+description: "Discover my approach to building environments, maps, and game worlds in Roblox Studio using parts, terrain tools, and custom 3D assets."
+---
+
+Building immersive game environments in Roblox Studio is one of my greatest passions as a developer. There's something uniquely satisfying about transforming an empty baseplate into a living, breathing world that players genuinely want to explore. Whether I'm sculpting sweeping natural landscapes, constructing dense urban environments, or hand-crafting intricate interiors, I bring the same attention to detail and design thinking to every project. My building work blends Roblox Studio's native tools with custom 3D assets from Blender, allowing me to create environments that feel polished, distinct, and purpose-built for the gameplay experience they support.
+
+## Building Techniques
+
+<CardGroup cols={2}>
+  <Card title="Part-Based Building" icon="cube">
+    Using Roblox Studio's core part system, I construct precise structures by anchoring, resizing, and aligning parts with accuracy. Union and Negate operations let me carve complex shapes that go far beyond simple boxes.
+  </Card>
+  <Card title="Terrain Sculpting" icon="mountain">
+    Roblox's terrain tools allow me to sculpt realistic hills, valleys, rivers, and coastlines. I use the raise, lower, smooth, and paint tools to create natural-looking outdoor environments that serve as compelling backdrops for gameplay.
+  </Card>
+  <Card title="Custom Asset Integration" icon="puzzle-piece">
+    I import custom Blender-modeled meshes directly into Studio and integrate them alongside native parts. This hybrid approach lets me achieve visual complexity and uniqueness that part-only builds simply can't match.
+  </Card>
+  <Card title="Lighting & Atmosphere" icon="sun">
+    Lighting transforms a functional map into an atmospheric experience. I configure Roblox's `Lighting` service — including ambient color, sky boxes, and atmospheric effects — to establish the right mood for each environment.
+  </Card>
+</CardGroup>
+
+## My Building Process
+
+<Steps>
+  <Step title="Planning the Layout">
+    Before placing a single part, I plan the environment on paper or in a reference document. I define the map's purpose, key areas, player flow, and overall scale. Having a clear layout plan prevents wasted time and ensures the finished space serves the gameplay it's designed for.
+  </Step>
+  <Step title="Blocking Out the Space">
+    I begin with a rough blockout using simple, unstyled parts to establish the overall scale and layout. Think of this as the skeleton of the map — it has no visual polish yet, but it lets me walk through the space in play mode and validate that proportions, distances, and sightlines all feel correct before investing in detail work.
+  </Step>
+  <Step title="Adding Detail & Polish">
+    With the blockout approved, I replace placeholder geometry with finished assets, apply surface appearances and textures, add decorative props, and refine the terrain. This is where the environment transforms from a grey-box prototype into a visually compelling world that matches the game's art style.
+  </Step>
+  <Step title="Optimizing for Performance">
+    The final pass is dedicated to performance. I audit part counts, replace where possible with instanced models, configure `LOD` settings, and ensure that no single area of the map creates a rendering bottleneck. A beautiful environment that runs poorly on low-end devices is never the goal — performance and visuals must coexist.
+  </Step>
+</Steps>
+
+## Tools I Use in Roblox Studio
+
+<AccordionGroup>
+  <Accordion title="Building Tools">
+    Roblox Studio's built-in model and part tools are my starting point for every build. I rely on the Move, Scale, Rotate, and Align tools daily, and use features like surface snapping and Studio's grid system to keep builds precise and clean. The Union and Negate tools are especially useful for creating complex, non-rectangular shapes from standard parts.
+  </Accordion>
+  <Accordion title="Terrain Editor">
+    The Terrain Editor is indispensable for creating outdoor environments. I use the sculpt, smooth, flatten, and paint brushes to shape believable landscapes, and the Fill and Generate tools to quickly establish large terrain areas. Material painting lets me blend grass, rock, sand, and water realistically across the same terrain surface.
+  </Accordion>
+  <Accordion title="Lighting System">
+    Roblox Studio's `Lighting` service and its `Atmosphere`, `Sky`, and `BloomEffect` post-processing objects are central to establishing the mood of any environment. I adjust ambient and outdoor ambient colors, configure `ClockTime` for day/night scenarios, and use `SurfaceAppearance` on parts and meshes for PBR material rendering under the `Future` lighting technology.
+  </Accordion>
+  <Accordion title="Plugin Tools">
+    Several community and first-party plugins extend what's possible in Studio. I regularly use tools for advanced part alignment, model rigging assistance, and build auditing. Plugins that help visualize part counts and identify performance hotspots are particularly valuable during the optimization phase of any project.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  Performance optimization is not an afterthought — it's a core part of the building process. Roblox games run on a huge variety of devices, and high part counts are one of the most common culprits behind poor frame rates. Throughout every build, I keep a close eye on part totals, consolidate geometry wherever possible, and use `MeshParts` instead of part unions when it improves rendering efficiency. A well-optimized map ensures every player, regardless of their device, gets a smooth and enjoyable experience.
+</Note>
+
+## See My Work
+
+<Card title="View Roblox Game Projects" icon="gamepad" href="/projects/roblox-games">
+  Explore my portfolio of Roblox games and environments, showcasing level design, terrain work, and custom-built game worlds created in Roblox Studio.
+</Card>

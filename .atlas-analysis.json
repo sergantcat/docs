@@ -1,13 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "projectType": "general",
+  "projectName": "Roblox Portfolio",
+  "projectDescription": "A personal portfolio showcasing Roblox game development projects, Blender 3D modeling, Roblox building, UI design, and JavaScript development skills.",
   "theme": "willow",
-  "name": "Roblox Portfolio",
-  "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
-  },
-  "favicon": "/favicon.svg",
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
   "navigation": {
     "tabs": [
       {
@@ -43,14 +41,13 @@
       }
     ]
   },
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "View Projects",
-      "href": "/projects/overview"
-    }
-  },
-  "footer": {
-    "socials": {}
-  }
+  "keyFeatures": [
+    "Blender 3D modeling showcases",
+    "Roblox game builds and environments",
+    "Roblox UI/UX design work",
+    "JavaScript development projects",
+    "Project gallery with descriptions",
+    "Skills overview and experience level"
+  ],
+  "publicApiSurface": []
 }
